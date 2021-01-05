@@ -43,11 +43,12 @@ const Hero = ({
       evt.preventDefault();
       if (!name) return
       console.log(`Submitting Name ${name}`)
-    fetch('https://cors-anywhere.herokuapp.com/https://BelovedAbleProperty.sambarrowclough.repl.co', {'method':'POST', headers: {'content-type': 'application/json'}, body:JSON.stringify({email:name})})
-    .then(r => {
-      console.log(r)
-      setSub("Thank you!")
-    })
+			fetch('https://inspyr.sambarrowclough.repl.co', {'method':'POST', headers: {'content-type': 'application/json'}, body:JSON.stringify({email:name})})
+			
+			.then(r => {
+				console.log(r)
+				setSub("Thank you!")
+			})
     
   }
 

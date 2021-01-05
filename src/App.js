@@ -29,7 +29,7 @@ const App = () => {
 			headers: {'content-type': 'application/json'},
 			body:JSON.stringify({from:document.referrer})
 		}
-		let url = 'https://cors-anywhere.herokuapp.com/https://BelovedAbleProperty.sambarrowclough.repl.co/track' 
+		let url = 'https://inspyr.sambarrowclough.repl.co/track' 
 		console.log('tracking..')
 		fetch(url, opt).then(r => {
 			  console.log('tracked!')
