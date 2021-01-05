@@ -1,5 +1,5 @@
 # TODO
-- [ ] add lightbox: https://www.npmjs.com/package/simple-react-lightbox
+- [x] add lightbox: https://www.npmjs.com/package/simple-react-lightbox
 - [x] add favicon
 - [x] add 6 more pricing pages
 - [x] inspyr.io
@@ -9,10 +9,25 @@
 - [ ] add logo text inspyr
 - [ ] subscribe
 - [x] MAde by Sam -> twitter page
-- [ ] write up include:
+- [ ] put domain on cloudflare for analytics
+- [ ] tweet:
   - [ ] tech used
   - [ ] sites mentioned
-
+- [ ] reword tagline
+- [ ] fzf finder for pages, arrangements, components
+- [ ] style guide for each site
+  - [ ] arrnagements
+  - [ ] text colors
+  - [ ] text sizes
+  - [ ] components
+    - [ ] btn
+    - [ ] input
+  - [ ] copy code for each item
+	- [ ] weekly design breakdown
+	- submit to:
+		- [ ] sidebar.io
+		- [ ] https://www.webdesignernews.com/
+  - [ ] track referalls
 # Free React landing page template
 
 ![Open React template preview](https://user-images.githubusercontent.com/2683512/78789364-545e7100-79ad-11ea-9e3c-9528c99cda8e.png)

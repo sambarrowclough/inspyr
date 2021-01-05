@@ -24,6 +24,18 @@ const App = () => {
   const childRef = useRef();
   let location = useLocation();
 
+		let opt = { 
+			method:'POST', 
+			headers: {'content-type': 'application/json'},
+			body:JSON.stringify({from:document.referrer})
+		}
+		let url = 'https://cors-anywhere.herokuapp.com/https://BelovedAbleProperty.sambarrowclough.repl.co/track' 
+		console.log('tracking..')
+		fetch(url, opt).then(r => {
+			  console.log('tracked!')
+				console.log(r)
+		})
+
   useEffect(() => {
     const page = location.pathname;
     document.body.classList.add('is-loaded')
