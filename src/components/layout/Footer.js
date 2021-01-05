@@ -41,7 +41,7 @@ const Footer = ({
             <Logo />
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <div className="footer-copyright">Made by Sam.</div>
+            <div className="footer-copyright">Made by <a href="https://twitter.com/sambarrowclough" target="_blank"  rel="noopener noreferrer" >Sam.</a></div>
           </div>
         </div>
       </div>

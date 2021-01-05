@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from '../elements/Image';
+import { SRLWrapper } from "simple-react-lightbox";
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -42,14 +43,31 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
+const [email] = useState(false);
+
+const options = {
+  buttons: {
+      showAutoplayButton: false,
+      showCloseButton: false,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showNextButton: false,
+      showPrevButton: false,
+      showThumbnailsButton: false,
+  },
+};
+
+
   return (
     <section
       {...props}
       className={outerClasses}
     >
+
       <div className="container">
         <div className={innerClasses}>
           <div className={tilesClasses}>
+
 
             <div style={{background:'#121212'}}className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
@@ -59,8 +77,6 @@ const FeaturesTiles = ({
 											<img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
 										</a>
 									</div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/ds.svg')}
@@ -68,14 +84,18 @@ const FeaturesTiles = ({
                       width={256}
                       height={256} />
                   </div>
-
-                <div className="features-tiles-item-content">
-									<div className="mt-16" >
-										<img alt="pricing page" src={require('./../../assets/images/dsp.png')}/>
-									</div>
                 </div>
+
+                <SRLWrapper options={options}>
+                  <div className="features-tiles-item-content">
+  									<div className="mt-16" >
+  										<img alt="pricing page" src={require('./../../assets/images/dsp.png')}/>
+  									</div>
+                  </div>
+                </SRLWrapper>
               </div>
             </div>
+            
 
             <div style={{background:'#fff'}}className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
@@ -85,8 +105,6 @@ const FeaturesTiles = ({
 											<img alt="Icon for link to website" src={require('./../../assets/images/external-link-dark.svg')}/>
 										</a>
 									</div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/rml.png')}
@@ -94,12 +112,16 @@ const FeaturesTiles = ({
                       width={64}
                       height={64} />
                   </div>
-
-                <div className="features-tiles-item-content">
-									<div className="mt-16" >
-										<img alt="pricing page" src={require('./../../assets/images/rmp.png')}/>
-									</div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/orm.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -111,8 +133,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/wl.png')}
@@ -120,12 +140,16 @@ const FeaturesTiles = ({
                       width={256}
                       height={256} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img alt="pricing page" src={require('./../../assets/images/wp.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/whim.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -137,8 +161,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-dark.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/ch.svg')}
@@ -146,12 +168,16 @@ const FeaturesTiles = ({
                       width={256}
                       height={256} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img alt="pricing page" src={require('./../../assets/images/ch.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/ch.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -164,8 +190,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/ll.svg')}
@@ -173,12 +197,16 @@ const FeaturesTiles = ({
                       width={54}
                       height={54} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img alt="pricing page" src={require('./../../assets/images/lp.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/lp.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -190,8 +218,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/rpll.svg')}
@@ -199,12 +225,16 @@ const FeaturesTiles = ({
                       width={128}
                       height={128} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img alt="pricing page" src={require('./../../assets/images/rpl.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/rpl.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -216,8 +246,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/dekksl.svg')}
@@ -225,12 +253,16 @@ const FeaturesTiles = ({
                       width={128}
                       height={128} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img  alt="pricing page" src={require('./../../assets/images/dekksp.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img  alt="pricing page" src={require('./../../assets/images/dekksp.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -242,8 +274,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/cssl.svg')}
@@ -251,12 +281,16 @@ const FeaturesTiles = ({
                       width={64}
                       height={64} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img alt="pricing page" src={require('./../../assets/images/css.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/css.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 
@@ -268,8 +302,6 @@ const FeaturesTiles = ({
                       <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
-                </div>
-
                   <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
                       src={require('./../../assets/images/opl.svg')}
@@ -277,12 +309,16 @@ const FeaturesTiles = ({
                       width={256}
                       height={256} />
                   </div>
-
-                <div className="features-tiles-item-content">
-                  <div className="mt-16" >
-                    <img alt="pricing page" src={require('./../../assets/images/op.png')}/>
-                  </div>
                 </div>
+
+
+                <SRLWrapper options={options}>
+									<div className="features-tiles-item-content">
+										<div className="mt-16" >
+											<img alt="pricing page" src={require('./../../assets/images/op.png')}/>
+										</div>
+									</div>
+                </SRLWrapper>
               </div>
             </div>
 

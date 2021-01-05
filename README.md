@@ -7,6 +7,11 @@
 - [ ] make detail page
 - [ ] launch by 9am
 - [ ] add logo text inspyr
+- [ ] subscribe
+- [x] MAde by Sam -> twitter page
+- [ ] write up include:
+  - [ ] tech used
+  - [ ] sites mentioned
 
 # Free React landing page template
 

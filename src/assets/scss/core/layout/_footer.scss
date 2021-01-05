@@ -13,6 +13,11 @@
 	}
 }
 
+.footer-copyright a {
+	text-decoration: underline;
+	color: #333;
+}
+
 .site-footer-inner {
 	padding: $footer--padding__mobile 0;
 }

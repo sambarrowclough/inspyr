@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 
@@ -36,6 +36,21 @@ const Hero = ({
     bottomDivider && 'has-bottom-divider'
   );
 
+  const [name, setName] = useState("");
+  const [sub, setSub] = useState("Subscribe for updates");
+  
+  const handleSubmit = (evt) => {
+      evt.preventDefault();
+      if (!name) return
+      console.log(`Submitting Name ${name}`)
+    fetch('https://cors-anywhere.herokuapp.com/https://BelovedAbleProperty.sambarrowclough.repl.co', {'method':'POST', headers: {'content-type': 'application/json'}, body:JSON.stringify({email:name})})
+    .then(r => {
+      console.log(r)
+      setSub("Thank you!")
+    })
+    
+  }
+
   return (
     <section
       {...props}
@@ -48,7 +63,19 @@ const Hero = ({
               Carefully selected pricing pages
             </h1>
           </div>
-          <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="800">
+          <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="300">
+          <form onSubmit={handleSubmit}>
+            <label>
+              <input 
+                className="email"
+                placeholder="Email address"
+                type="text"           
+                value={name}
+                onChange={e => setName(e.target.value)} 
+              />
+            </label>
+            <input type="submit" className="btn-sub" value={sub} />
+          </form>
           </div>
         </div>
       </div>
