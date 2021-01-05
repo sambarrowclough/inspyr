@@ -39,10 +39,21 @@
 
 	.tiles-item {
 		flex-basis: $features-tiles-item--width;
+		height: 400px;
+		border-radius: 10px;
+		margin-left:1em;
+		border: 1px solid #f6f6f7;
+		margin-bottom: 1em;
 		max-width: $features-tiles-item--width;
 		@if ( $features-tiles-items--padding__mobile != null ) {
 			padding: $features-tiles-items--padding__mobile / 2;
 		}
+	}
+
+	.tiles-item:hover {
+	    box-shadow: 0 40px 80px -10px rgba(0,0,0,.07)!important;
+	    transform: scale(1.02)!important;
+	    /*background: #fff!important;*/
 	}
 
 	.tiles-item-inner {

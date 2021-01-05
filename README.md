@@ -1,3 +1,12 @@
+# TODO
+- [ ] add lightbox: https://www.npmjs.com/package/simple-react-lightbox
+- [ ] add favicon
+- [ ] add 6 more pricing pages
+- [ ] inspyr.io
+- [ ] add animation on hover
+- [ ] make detail page
+- [ ] launch by 9am
+
 # Free React landing page template
 
 ![Open React template preview](https://user-images.githubusercontent.com/2683512/78789364-545e7100-79ad-11ea-9e3c-9528c99cda8e.png)

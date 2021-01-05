@@ -55,137 +55,239 @@ const FeaturesTiles = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
 
-            <div className="tiles-item reveal-from-bottom">
+            <div style={{background:'#121212'}}className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+									<div className="mb-16">
+										<a href="https://deepsource.io/pricing/" target="_blank" >
+											<img src={require('./../../assets/images/external-link-light.svg')}/>
+										</a>
+									</div>
+                </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
+                      src={require('./../../assets/images/ds.svg')}
+                      alt="Features tile icon 01"
+                      width={256}
+                      height={256} />
+                  </div>
+
+                <div className="features-tiles-item-content">
+									<div className="mt-16" >
+										<img src={require('./../../assets/images/dsp.png')}/>
+									</div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{background:'#fff'}}className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+									<div className="mb-16">
+										<a href="https://www.onroadmap.com/pricing" target="_blank" >
+											<img src={require('./../../assets/images/external-link-dark.svg')}/>
+										</a>
+									</div>
+                </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/rml.png')}
                       alt="Features tile icon 01"
                       width={64}
                       height={64} />
                   </div>
-                </div>
+
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+									<div className="mt-16" >
+										<img src={require('./../../assets/images/rmp.png')}/>
+									</div>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+            <div style={{background: 'linear-gradient(225deg,#9b42e3,#303395)'}} className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
+                  <div className="mb-16">
+                    <a href="https://whimsical.com/pricing" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    </a>
                   </div>
                 </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/wl.png')}
+                      alt="Features tile icon 01"
+                      width={256}
+                      height={256} />
+                  </div>
+
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/wp.png')}/>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
+            <div style={{background: '#fff'}} className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
+                  <div className="mb-16">
+                    <a href="https://clubhouse.io/pricing" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-dark.svg')}/>
+                    </a>
                   </div>
                 </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/ch.svg')}
+                      alt="Features tile icon 01"
+                      width={256}
+                      height={256} />
+                  </div>
+
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/ch.png')}/>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom">
+
+            <div style={{background: '#060606'}} className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
+                  <div className="mb-16">
+                    <a href="https://linear.app/pricing/" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    </a>
                   </div>
                 </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/ll.svg')}
+                      alt="Features tile icon 01"
+                      width={54}
+                      height={54} />
+                  </div>
+
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/lp.png')}/>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+            <div style={{background: '#0d101e'}} className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
-                      alt="Features tile icon 05"
-                      width={64}
-                      height={64} />
+                  <div className="mb-16">
+                    <a href="https://repl.it/site/pricing" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    </a>
                   </div>
                 </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/rpll.svg')}
+                      alt="Features tile icon 01"
+                      width={128}
+                      height={128} />
+                  </div>
+
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/rpl.png')}/>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
+            <div style={{background: '#000'}} className="tiles-item reveal-from-bottom  data-reveal-delay='200'">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="mb-16">
+                    <a href="https://dekks.app/plans" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    </a>
+                  </div>
+                </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
-                      alt="Features tile icon 06"
+                      src={require('./../../assets/images/dekksl.svg')}
+                      alt="Features tile icon 01"
+                      width={128}
+                      height={128} />
+                  </div>
+
+                <div className="features-tiles-item-content">
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/dekksp.png')}/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{background: '#1e202cf2'}} className="tiles-item reveal-from-bottom  data-reveal-delay='400'">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="mb-16">
+                    <a href="https://cssscanpro.com/#pricing" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    </a>
+                  </div>
+                </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/cssl.svg')}
+                      alt="Features tile icon 01"
                       width={64}
                       height={64} />
                   </div>
-                </div>
+
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/css.png')}/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{background: '#0e0e12'}} className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="mb-16">
+                    <a href="https://www.openphone.co/pricing" target="_blank" >
+                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    </a>
+                  </div>
+                </div>
+
+                  <div className="mb-16 mt-16 features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/opl.svg')}
+                      alt="Features tile icon 01"
+                      width={256}
+                      height={256} />
+                  </div>
+
+                <div className="features-tiles-item-content">
+                  <div className="mt-16" >
+                    <img src={require('./../../assets/images/op.png')}/>
+                  </div>
                 </div>
               </div>
             </div>

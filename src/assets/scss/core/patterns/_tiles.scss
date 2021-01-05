@@ -43,6 +43,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	justify-content: space-between;
 	height: 100%;
 	padding: $tiles-item--inner-padding-v $tiles-item--inner-padding-h;
 }
