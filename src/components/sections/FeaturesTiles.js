@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import Image from '../elements/Image';
@@ -42,8 +42,6 @@ const FeaturesTiles = ({
     'tiles-wrap center-content',
     pushLeft && 'push-left'
   );
-
-const [email] = useState(false);
 
 const options = {
   buttons: {
