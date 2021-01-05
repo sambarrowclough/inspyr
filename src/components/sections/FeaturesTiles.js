@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
-import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 
 const propTypes = {
@@ -43,11 +42,6 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
-  const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
-  };
-
   return (
     <section
       {...props}
@@ -61,8 +55,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
 									<div className="mb-16">
-										<a href="https://deepsource.io/pricing/" target="_blank" >
-											<img src={require('./../../assets/images/external-link-light.svg')}/>
+										<a href="https://deepsource.io/pricing/" target="_blank"  rel="noopener noreferrer">
+											<img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
 										</a>
 									</div>
                 </div>
@@ -77,7 +71,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
 									<div className="mt-16" >
-										<img src={require('./../../assets/images/dsp.png')}/>
+										<img alt="pricing page" src={require('./../../assets/images/dsp.png')}/>
 									</div>
                 </div>
               </div>
@@ -87,8 +81,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
 									<div className="mb-16">
-										<a href="https://www.onroadmap.com/pricing" target="_blank" >
-											<img src={require('./../../assets/images/external-link-dark.svg')}/>
+										<a href="https://www.onroadmap.com/pricing" target="_blank"  rel="noopener noreferrer" >
+											<img alt="Icon for link to website" src={require('./../../assets/images/external-link-dark.svg')}/>
 										</a>
 									</div>
                 </div>
@@ -103,7 +97,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
 									<div className="mt-16" >
-										<img src={require('./../../assets/images/rmp.png')}/>
+										<img alt="pricing page" src={require('./../../assets/images/rmp.png')}/>
 									</div>
                 </div>
               </div>
@@ -113,8 +107,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://whimsical.com/pricing" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    <a href="https://whimsical.com/pricing" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -129,7 +123,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/wp.png')}/>
+                    <img alt="pricing page" src={require('./../../assets/images/wp.png')}/>
                   </div>
                 </div>
               </div>
@@ -139,8 +133,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://clubhouse.io/pricing" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-dark.svg')}/>
+                    <a href="https://clubhouse.io/pricing" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-dark.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -155,7 +149,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/ch.png')}/>
+                    <img alt="pricing page" src={require('./../../assets/images/ch.png')}/>
                   </div>
                 </div>
               </div>
@@ -166,8 +160,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://linear.app/pricing/" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    <a href="https://linear.app/pricing/" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -182,7 +176,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/lp.png')}/>
+                    <img alt="pricing page" src={require('./../../assets/images/lp.png')}/>
                   </div>
                 </div>
               </div>
@@ -192,8 +186,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://repl.it/site/pricing" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    <a href="https://repl.it/site/pricing" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -208,7 +202,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/rpl.png')}/>
+                    <img alt="pricing page" src={require('./../../assets/images/rpl.png')}/>
                   </div>
                 </div>
               </div>
@@ -218,8 +212,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://dekks.app/plans" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    <a href="https://dekks.app/plans" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -234,7 +228,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/dekksp.png')}/>
+                    <img  alt="pricing page" src={require('./../../assets/images/dekksp.png')}/>
                   </div>
                 </div>
               </div>
@@ -244,8 +238,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://cssscanpro.com/#pricing" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    <a href="https://cssscanpro.com/#pricing" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -260,7 +254,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/css.png')}/>
+                    <img alt="pricing page" src={require('./../../assets/images/css.png')}/>
                   </div>
                 </div>
               </div>
@@ -270,8 +264,8 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="mb-16">
-                    <a href="https://www.openphone.co/pricing" target="_blank" >
-                      <img src={require('./../../assets/images/external-link-light.svg')}/>
+                    <a href="https://www.openphone.co/pricing" target="_blank"  rel="noopener noreferrer">
+                      <img alt="Icon for link to website" src={require('./../../assets/images/external-link-light.svg')}/>
                     </a>
                   </div>
                 </div>
@@ -286,7 +280,7 @@ const FeaturesTiles = ({
 
                 <div className="features-tiles-item-content">
                   <div className="mt-16" >
-                    <img src={require('./../../assets/images/op.png')}/>
+                    <img alt="pricing page" src={require('./../../assets/images/op.png')}/>
                   </div>
                 </div>
               </div>
