@@ -100,7 +100,7 @@ export default function Index({ allPosts }) {
   }
 
 
-  if (true) {
+  if (false) {
     let opt = { 
       method:'POST', 
       headers: {'content-type': 'application/json'},
