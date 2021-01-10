@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aac5db88.chunk.css",
+    "main.js": "/static/js/main.8655a3a7.chunk.js",
+    "main.js.map": "/static/js/main.8655a3a7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b8b9f84b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b8b9f84b.js.map",
+    "static/js/2.bfd4a6f9.chunk.js": "/static/js/2.bfd4a6f9.chunk.js",
+    "static/js/2.bfd4a6f9.chunk.js.map": "/static/js/2.bfd4a6f9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0c864e1cfc4fb4e2338f921aa034e984.js": "/precache-manifest.0c864e1cfc4fb4e2338f921aa034e984.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.aac5db88.chunk.css.map": "/static/css/main.aac5db88.chunk.css.map",
+    "static/js/2.bfd4a6f9.chunk.js.LICENSE.txt": "/static/js/2.bfd4a6f9.chunk.js.LICENSE.txt",
+    "static/media/al.svg": "/static/media/al.02ee0cdd.svg",
+    "static/media/ch.png": "/static/media/ch.69fbb7b2.png",
+    "static/media/ch.svg": "/static/media/ch.eb391a63.svg",
+    "static/media/css.png": "/static/media/css.0d2a6308.png",
+    "static/media/cssl.svg": "/static/media/cssl.35f58cc5.svg",
+    "static/media/style.scss": "/static/media/cta-illustration.3ce357e7.svg",
+    "static/media/dekksl.svg": "/static/media/dekksl.5cd01f72.svg",
+    "static/media/dekksp.png": "/static/media/dekksp.7872ab63.png",
+    "static/media/ds.svg": "/static/media/ds.0d31a3dd.svg",
+    "static/media/dsp.png": "/static/media/dsp.9bc11035.png",
+    "static/media/external-link-dark.svg": "/static/media/external-link-dark.f4681aea.svg",
+    "static/media/external-link-light.svg": "/static/media/external-link-light.397102cf.svg",
+    "static/media/ll.svg": "/static/media/ll.6b053cf1.svg",
+    "static/media/lp.png": "/static/media/lp.eb05b09c.png",
+    "static/media/op.png": "/static/media/op.18aa34ea.png",
+    "static/media/opl.svg": "/static/media/opl.275dabed.svg",
+    "static/media/orm.png": "/static/media/orm.354468c7.png",
+    "static/media/rml.png": "/static/media/rml.56bed8cb.png",
+    "static/media/rpl.png": "/static/media/rpl.1662b961.png",
+    "static/media/rpll.svg": "/static/media/rpll.4f149d9d.svg",
+    "static/media/whim.png": "/static/media/whim.b96f93d0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8b9f84b.js",
+    "static/js/2.bfd4a6f9.chunk.js",
+    "static/css/main.aac5db88.chunk.css",
+    "static/js/main.8655a3a7.chunk.js"
+  ]
+}
