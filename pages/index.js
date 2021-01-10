@@ -14,6 +14,7 @@ import { Fade } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import Reveal from "react-awesome-reveal"; 
 
+
 const Card = ({ 
   background, 
   pricing,
