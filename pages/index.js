@@ -100,7 +100,7 @@ export default function Index({ allPosts }) {
   }
 
 
-  if (false) {
+  if (true) {
     let opt = { 
       method:'POST', 
       headers: {'content-type': 'application/json'},
@@ -130,18 +130,26 @@ export default function Index({ allPosts }) {
 		}
 	`;
 
+
 	function MyAnimatedComponent({ children, delay}) {
 		return (
-			<Reveal 
-				delay={delay}
-				duration='1000'	
-				keyframes={customAnimation}
-				triggerOnce
-			>
+			<div>
 				{children}
-			</Reveal>
+			</div>
 		);
 	}
+	// function MyAnimatedComponent({ children, delay}) {
+	// 	return (
+	// 		<Reveal 
+	// 			delay={delay}
+	// 			duration='1000'	
+	// 			keyframes={customAnimation}
+	// 			triggerOnce
+	// 		>
+	// 			{children}
+	// 		</Reveal>
+	// 	);
+	// }
 
 	const handleChange = (e) => {
 		e.preventDefault()
@@ -159,7 +167,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>inspyr - carefully selected pricing pages for inspiration</title>
         </Head>
         <Container>
           <div className="headline mt-4">
