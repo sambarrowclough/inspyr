@@ -3,17 +3,20 @@ import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
+import { getIcons } from '../lib/api'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CMS_NAME } from '../lib/constants'
-import {useState} from 'react'
+import {useState, Fragment, useEffect } from 'react'
 // import ScrollReveal from 'scrollreveal'
 import { Fade } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import Reveal from "react-awesome-reveal"; 
 
+import Fuse from 'fuse.js'
+
+let fuse = null
 
 const Card = ({ 
   background, 
@@ -84,7 +87,8 @@ const Card = ({
 }
 
 
-export default function Index({ allPosts }) {
+export default function Index({ icons, index }) {
+
   const handleSubmit = (e) => {
       e.preventDefault()
 		  if (sent) return
@@ -152,17 +156,68 @@ export default function Index({ allPosts }) {
 	// 	);
 	// }
 
+
 	const handleChange = (e) => {
 		e.preventDefault()
 		console.log(e.target.value)
 		setEmail(e.target.value)
 	}
 
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+
+function Search() {
+  const [data, setData] = useState([{item:{}}]);
+  const [query, setQuery] = useState('');
+
+	const options = {
+	  // isCaseSensitive: false,
+	  // includeScore: false,
+	  // shouldSort: true,
+	  // includeMatches: false,
+	  // findAllMatches: false,
+	  // minMatchCharLength: 1,
+	  // location: 0,
+	  // threshold: 0.6,
+	  // distance: 100,
+	  // useExtendedSearch: false,
+	  // ignoreLocation: false,
+	  // ignoreFieldNorm: false,
+	  keys: [
+	    "name",
+	  ]
+	};
+
+  useEffect(() => {
+    const fetchData = async () => {
+		const fuse = new Fuse(icons, options)
+		const results = fuse.search(query)
+		setData(results)
+  	}
+ 
+    fetchData();
+  }, [query]);
+ 
+  return (
+    <Fragment>
+      <input
+        type="text"
+        value={query}
+        className="bg-gray-100 transition-all focus:ring-2 rounded outline-none px-4 py-2 mr-4"
+        onChange={event => setQuery(event.target.value)}
+      />
+      <div>
+        {data.map(x => (
+              <p>{x.item.name}</p>
+          
+        ))}
+      </div>
+    </Fragment>
+  );
+}
+
   const [email, setEmail] = useState("")
   const [sent, setSent] = useState(false)
   const [sub, setSub] = useState("Subscribe for updates")
+  const [results, setResults] = useState("")
 
   return (
     <>
@@ -184,6 +239,11 @@ export default function Index({ allPosts }) {
           </div>
 
           <Intro />
+
+
+					<Search />
+
+
 
 		      <form onSubmit={handleSubmit} className="flex flex-row justify-center mb-16">
 						<div>
@@ -355,16 +415,9 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+	var icons = getIcons()
 
   return {
-    props: { allPosts },
+    props: { icons },
   }
 }
