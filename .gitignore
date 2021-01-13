@@ -2,8 +2,7 @@
 
 # dependencies
 node_modules
-nextjs/node_modules
-cra/node_modules
+.cra/node_modules
 /.pnp
 .pnp.js
 
@@ -11,12 +10,10 @@ cra/node_modules
 /coverage
 
 # next.js
-nextjs/.next/
 .next/
-nextjs/out/
 
 # production
-nextjs/build
+build
 
 # misc
 .DS_Store
