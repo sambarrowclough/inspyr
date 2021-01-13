@@ -23,6 +23,7 @@ import toast, { Toaster } from "react-hot-toast";
 import * as JsSearch from "js-search";
 
 
+
 export default function Index({ icons, index }) {
   if (false) {
     let opt = {
