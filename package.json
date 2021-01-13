@@ -11,6 +11,7 @@
     "@stitches/react": "^0.0.2",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
+    "flexsearch": "^0.6.32",
     "fuse.js": "^6.4.6",
     "gray-matter": "4.0.2",
     "js-search": "^2.0.0",

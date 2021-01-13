@@ -9,7 +9,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { CMS_NAME } from "../lib/constants";
-import { useState, Fragment, useEffect } from "react";
+import { useState, useRef, Fragment, useEffect, useCallback} from "react";
 // import ScrollReveal from 'scrollreveal'
 import { Fade } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -21,7 +21,18 @@ import toast, { Toaster } from "react-hot-toast";
 
 import * as JsSearch from "js-search";
 
+var index = require("flexsearch").create({/* options */});
+var FlexSearch = require("flexsearch");
+var index = new FlexSearch({
+
+    encode: "icase",
+    tokenize: "full",
+    async: true,
+    worker: 4
+});
+
 export default function Index({ icons, index }) {
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (sent) return;
@@ -100,6 +111,7 @@ export default function Index({ icons, index }) {
   function Search() {
     const [data, setData] = useState([{ item: {} }]);
     const [query, setQuery] = useState("");
+		const searchInput = useRef(null)
 
     useEffect(() => {
       const fetchData = async () => {
@@ -107,11 +119,36 @@ export default function Index({ icons, index }) {
         // 	if (i.name.includes(query)) return i
         // })
         let results = search.search(query);
+				if (!query) results = icons
         setData(results);
       };
 
       fetchData();
     }, [query]);
+
+		// useEffect(() => {
+		// 	  setTimeout(() => {
+		// 			searchInput.current.focus()
+		// 		}, 0)
+		// },[])
+
+  const handleUserKeyPress = useCallback(event => {
+    const { key, keyCode } = event;
+
+    if (keyCode === 191) {
+			setTimeout(() => 
+				searchInput.current.focus()
+			)
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleUserKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress);
+    };
+  }, [handleUserKeyPress]);
 
     const copyIcon = (e) => {
       let target = e.target.closest("button").previousElementSibling;
@@ -137,40 +174,40 @@ export default function Index({ icons, index }) {
 
     return (
       <Fragment>
-      	<div className="relative flex-inline justify-center">
-	        <input
-	          placeholder="Search icons"
-	          type="text"
-	          value={query}
-	          className="border-2 px-10 transition-all focus:ring-4 rounded outline-none px-4 py-2"
-	          onChange={(event) => setQuery(event.target.value)}
-	        />
+				<div className="flex justify-center pt-40">
+					<div className="flex-inline relative">
+						<input
+						  ref={searchInput}
+							placeholder="Search Icons"
+							type="text"
+							value={query}
+							className="border-2 px-10 transition-all focus:ring-4 rounded outline-none px-4 py-2"
+							onChange={(event) => setQuery(event.target.value)}
+						/>
 
-	        <div className="absolute text-gray-400 top-3 left-2">
-	        	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-	        		<circle cx="11" cy="11" r="8"></circle>
-	        		<line x1="21" y1="21" x2="16.65" y2="16.65"></line><
-        		/svg>
-	        </div>
+						<div className="absolute text-gray-400 top-3 left-2">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+								<circle cx="11" cy="11" r="8"></circle>
+								<line x1="21" y1="21" x2="16.65" y2="16.65"></line><
+							/svg>
+						</div>
 
-	        <div className="absolute right-4 top-3 text-gray-300">
-	        	<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
-	        		<rect x=".5" y=".5" width="19" height="19" rx="3.5" stroke="currentColor"></rect>
-	        		<path d="M6.5 16l7-12" stroke="currentColor"></path>
-        		</svg>
-	        </div>
+						<div className="absolute right-4 top-3 text-gray-300">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+								<rect x=".5" y=".5" width="19" height="19" rx="3.5" stroke="currentColor"></rect>
+								<path d="M6.5 16l7-12" stroke="currentColor"></path>
+							</svg>
+						</div>
+					</div>
         </div>
 
-        <div className="icons flex flex-wrap m">
+        <div className="pt-20 icons flex flex-wrap m">
           {data.length &&
             data.map(
               (x, i) =>
                 x &&
                 x.svg &&
                 x.name && (
-                  <Tip
-                    name={x.name}
-                    content={
                       <div key={i}>
                         {x && x.svg && (
                           <input
@@ -188,8 +225,6 @@ export default function Index({ icons, index }) {
                           />
                         )}
                       </div>
-                    }
-                  ></Tip>
                 )
             )}
         </div>
@@ -223,6 +258,7 @@ export default function Index({ icons, index }) {
       </Tooltip.Root>
     );
   }
+
 
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
@@ -295,6 +331,10 @@ export default function Index({ icons, index }) {
 
 export async function getStaticProps() {
   var icons = getIcons();
+
+  icons.forEach((ico, i) => {
+    index.add(i, JSON.stringify(ico));
+  })
 
   return {
     props: { icons },
