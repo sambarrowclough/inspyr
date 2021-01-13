@@ -10,10 +10,10 @@ node_modules
 /coverage
 
 # next.js
-.next/
+.next
 
 # production
-build
+
 
 # misc
 .DS_Store
