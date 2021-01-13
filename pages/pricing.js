@@ -9,6 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { CMS_NAME } from "../lib/constants";
 import { useState, Fragment, useEffect } from "react";
+import Nav from "../components/nav";
+
 // import ScrollReveal from 'scrollreveal'
 import { Fade } from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -21,30 +23,6 @@ import toast, { Toaster } from "react-hot-toast";
 import * as JsSearch from "js-search";
 
 export default function Index({ icons, index }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (sent) return;
-
-    if (!email) return;
-
-    console.log(`Submitting Name ${email}`);
-    fetch("https://inspyr.sambarrowclough.repl.co", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: email }),
-    }).then((r) => {
-      console.log(r);
-      setSub("Thank you!");
-      setSent(true);
-    });
-  };
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-    setEmail(e.target.value);
-  };
-
   if (false) {
     let opt = {
       method: "POST",
@@ -91,9 +69,6 @@ export default function Index({ icons, index }) {
   // 	);
   // }
 
-  const [email, setEmail] = useState("");
-  const [sent, setSent] = useState(false);
-  const [sub, setSub] = useState("Subscribe for updates");
 
   return (
     <>
@@ -104,39 +79,9 @@ export default function Index({ icons, index }) {
           </title>
         </Head>
         <Container>
-          <div className="headline mt-4">
-            <Link as={`/`} href="/">
-              <a>
-                <Image src="/inspyr.svg" width="32" height="32" />
-              </a>
-            </Link>
-          </div>
+          <Nav />
 
           <Intro />
-
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-row justify-center mb-16"
-          >
-            <div>
-              <input
-                placeholder="Email addres"
-                className="bg-gray-100 transition-all focus:ring-2 rounded outline-none px-4 py-2 mr-4"
-                type="text"
-                value={email}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div>
-              <input
-                onClick={handleSubmit}
-                className="bg-gray-900 text-white rounded px-4 py-2 hover:shadow-sm cursor-pointer transition-all"
-                type="button"
-                value={sub}
-              />
-            </div>
-          </form>
 
           <div
             className="w-auto flex flex-wrap justify-center"

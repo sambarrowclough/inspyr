@@ -4,9 +4,10 @@ import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Card from "../components/card";
+import Nav from "../components/nav";
+
 import { getIcons } from "../lib/api";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { CMS_NAME } from "../lib/constants";
 import { useState, useRef, Fragment, useEffect, useCallback} from "react";
@@ -21,36 +22,8 @@ import toast, { Toaster } from "react-hot-toast";
 
 import * as JsSearch from "js-search";
 
-var index = require("flexsearch").create({/* options */});
-var FlexSearch = require("flexsearch");
-var index = new FlexSearch({
-
-    encode: "icase",
-    tokenize: "full",
-    async: true,
-    worker: 4
-});
 
 export default function Index({ icons, index }) {
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (sent) return;
-
-    if (!email) return;
-
-    console.log(`Submitting Name ${email}`);
-    fetch("https://inspyr.sambarrowclough.repl.co", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: email }),
-    }).then((r) => {
-      console.log(r);
-      setSub("Thank you!");
-      setSent(true);
-    });
-  };
-
   if (false) {
     let opt = {
       method: "POST",
@@ -96,12 +69,6 @@ export default function Index({ icons, index }) {
   // 		</Reveal>
   // 	);
   // }
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-    setEmail(e.target.value);
-  };
 
   var search = new JsSearch.Search("name");
   // search.indexStrategy = new JsSearch.AllSubstringsIndexStrategy();
@@ -174,7 +141,7 @@ export default function Index({ icons, index }) {
 
     return (
       <Fragment>
-				<div className="flex justify-center pt-40">
+				<div className="flex justify-center pt-20">
 					<div className="flex-inline relative">
 						<input
 						  ref={searchInput}
@@ -259,10 +226,6 @@ export default function Index({ icons, index }) {
     );
   }
 
-
-  const [email, setEmail] = useState("");
-  const [sent, setSent] = useState(false);
-  const [sub, setSub] = useState("Subscribe for updates");
   const [results, setResults] = useState("");
 
   return (
@@ -274,55 +237,13 @@ export default function Index({ icons, index }) {
           </title>
         </Head>
         <Container>
-          <div className="mt-8 flex flex-row items-center justify-between">
-            <div className="headline">
-              <Link as={`/`} href="/">
-                <a>
-                  <Image src="/inspyr.svg" width="32" height="32" />
-                </a>
-              </Link>
-            </div>
 
-            <div className="flex">
-              <div className="mr-6">
-                <Link as={`/`} href="/">
-                  <a className="text-gray-400 text-sm">Icons</a>
-                </Link>
-              </div>
-
-              <div>
-                <Link as={`/pricing`} href="/pricing">
-                  <a className="text-gray-400 text-sm">Pricing Pages</a>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Nav />
 
           <Search />
 
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-row justify-center mb-16"
-          >
-            <div>
-              <input
-                placeholder="Email addres"
-                className="bg-gray-100 transition-all focus:ring-2 rounded outline-none px-4 py-2 mr-4"
-                type="text"
-                value={email}
-                onChange={handleChange}
-              />
-            </div>
 
-            <div>
-              <input
-                onClick={handleSubmit}
-                className="bg-gray-900 text-white rounded px-4 py-2 hover:shadow-sm cursor-pointer transition-all"
-                type="button"
-                value={sub}
-              />
-            </div>
-          </form>
+
         </Container>
       </Layout>
     </>
@@ -331,10 +252,6 @@ export default function Index({ icons, index }) {
 
 export async function getStaticProps() {
   var icons = getIcons();
-
-  icons.forEach((ico, i) => {
-    index.add(i, JSON.stringify(ico));
-  })
 
   return {
     props: { icons },
