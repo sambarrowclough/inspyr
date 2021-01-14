@@ -1,5 +1,4 @@
-import Image from 'next/image'
- 
+
 export default function Card ({ 
   background, 
   pricing,
@@ -39,7 +38,7 @@ export default function Card ({
           <div>
             <div className="mb-4 text-white">
               <a href={url} target="_blank">
-                <Image
+                <img
                   src={external}
                   width={24}
                   height={24}

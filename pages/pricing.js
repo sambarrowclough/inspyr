@@ -5,7 +5,6 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { CMS_NAME } from "../lib/constants";
 import { useState, Fragment, useEffect } from "react";
