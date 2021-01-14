@@ -1,0 +1,1 @@
+{"ast":null,"code":"// stitches.config.ts\nimport { createStyled } from '@stitches/react';\nexport const {\n  styled,\n  css\n} = createStyled({\n  prefix: '',\n  tokens: {},\n  breakpoints: {},\n  utils: {}\n});","map":null,"metadata":{},"sourceType":"module"}

@@ -48,7 +48,7 @@ export default function Card ({
             </div>
 
             <div className="mt-4">
-              <Image
+              <img
                 src={logo}
                 width={logoWidth}
                 height={logoHeight}
@@ -57,7 +57,7 @@ export default function Card ({
           </div>
 
           <div className="mt-4">
-            <Image
+            <img
               src={pricing}
               width={pricingWidth}
               height={pricingHeight}
