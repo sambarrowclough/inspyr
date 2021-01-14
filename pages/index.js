@@ -167,6 +167,10 @@ export default function Index({ icons, index }) {
 					</div>
         </div>
 
+		<div className="flex justify-center text-gray-300 text-sm mt-4">
+				NOTE: click to copy an icon
+		</div>
+
         <div className="pt-20 icons flex flex-wrap m">
           {data.length &&
             data.map(
@@ -240,6 +244,7 @@ export default function Index({ icons, index }) {
           <Nav />
 
           <Search />
+
 
 
 
