@@ -53,21 +53,21 @@ export default function Index({ icons, index }) {
 		}
 	`;
 
-  function MyAnimatedComponent({ children, delay }) {
-    return <div>{children}</div>;
-  }
-  // function MyAnimatedComponent({ children, delay}) {
-  // 	return (
-  // 		<Reveal
-  // 			delay={delay}
-  // 			duration='1000'
-  // 			keyframes={customAnimation}
-  // 			triggerOnce
-  // 		>
-  // 			{children}
-  // 		</Reveal>
-  // 	);
+  // function MyAnimatedComponent({ children, delay }) {
+  //   return <div>{children}</div>;
   // }
+  function MyAnimatedComponent({ children, delay}) {
+  	return (
+  		<Reveal
+  			delay={delay}
+  			duration='200'
+  			keyframes={customAnimation}
+  			triggerOnce
+  		>
+  			{children}
+  		</Reveal>
+  	);
+  }
 
   var search = new JsSearch.Search("name");
   // search.indexStrategy = new JsSearch.AllSubstringsIndexStrategy();
@@ -140,6 +140,7 @@ export default function Index({ icons, index }) {
 
     return (
       <Fragment>
+        <MyAnimatedComponent>
 				<div className="flex justify-center pt-20">
 					<div className="flex-inline relative">
 						<input
@@ -166,10 +167,15 @@ export default function Index({ icons, index }) {
 						</div>
 					</div>
         </div>
+        </MyAnimatedComponent>
 
-		<div className="flex justify-center text-gray-300 text-sm mt-4">
-				NOTE: click to copy an icon
-		</div>
+        <MyAnimatedComponent
+          delay={75}
+        >
+      		<div className="flex justify-center text-gray-300 text-sm mt-4">
+      				NOTE: click to copy an icon
+      		</div>
+        </MyAnimatedComponent>
 
         <div className="pt-20 icons flex flex-wrap m">
           {data.length &&

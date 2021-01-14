@@ -52,21 +52,21 @@ export default function Index({ icons, index }) {
 		}
 	`;
 
-  function MyAnimatedComponent({ children, delay }) {
-    return <div>{children}</div>;
-  }
-  // function MyAnimatedComponent({ children, delay}) {
-  // 	return (
-  // 		<Reveal
-  // 			delay={delay}
-  // 			duration='1000'
-  // 			keyframes={customAnimation}
-  // 			triggerOnce
-  // 		>
-  // 			{children}
-  // 		</Reveal>
-  // 	);
+  // function MyAnimatedComponent({ children, delay }) {
+  //   return <div>{children}</div>;
   // }
+  function MyAnimatedComponent({ children, delay}) {
+  	return (
+  		<Reveal
+  			delay={delay}
+  			duration='1000'
+  			keyframes={customAnimation}
+  			triggerOnce
+  		>
+  			{children}
+  		</Reveal>
+  	);
+  }
 
 
   return (
