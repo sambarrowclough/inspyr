@@ -23,20 +23,6 @@ import toast, { Toaster } from "react-hot-toast";
 import * as JsSearch from "js-search";
 
 export default function Index({ icons, index }) {
-  if (false) {
-    let opt = {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ from: document.referrer }),
-    };
-    let url = "https://inspyr.sambarrowclough.repl.co/track";
-    console.log("tracking..");
-    fetch(url, opt).then((r) => {
-      console.log("tracked!");
-      console.log(r);
-    });
-  }
-
   const customAnimation = keyframes`
 		from {
 			visibility: visible;
@@ -91,6 +77,22 @@ export default function Index({ icons, index }) {
 
       fetchData();
     }, [query]);
+
+    useEffect(() => {
+      if (true) {
+        let opt = {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ from: document.referrer }),
+        };
+        let url = "https://inspyr.sambarrowclough.repl.co/track";
+        console.log("tracking..");
+        fetch(url, opt).then((r) => {
+          console.log("tracked!");
+          console.log(r);
+        });
+      }
+    }, [])
 
 		// useEffect(() => {
 		// 	  setTimeout(() => {
@@ -246,14 +248,8 @@ export default function Index({ icons, index }) {
           </title>
         </Head>
         <Container>
-
           <Nav />
-
           <Search />
-
-
-
-
         </Container>
       </Layout>
     </>
