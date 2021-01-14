@@ -1,9 +1,7 @@
 # 404 on production page
-1. npm run build
-2. next start
-3. next export
-4. deploy
-5. `out` output dir
+1. build cmd = next build && next export
+2. deploy
+3. `out` output dir
 
 # A statically generated blog example using Next.js and Markdown
 

@@ -35,34 +35,34 @@ export default function Card ({
           height: '100%',
           padding: '0'
         }}>
-          <div>
-            <div className="mb-4 text-white">
-              <a href={url} target="_blank">
-                <img
-                  src={external}
-                  width={24}
-                  height={24}
-                />
-              </a>
-            </div>
+				<div className="flex flex-col items-center">
+					<div className="mb-4 text-white">
+						<a href={url} target="_blank">
+							<img
+								src={external}
+								width={24}
+								height={24}
+							/>
+						</a>
+					</div>
 
-            <div className="mt-4">
-              <img
-                src={logo}
-                width={logoWidth}
-                height={logoHeight}
-              />
-            </div>
-          </div>
+					<div className="mt-4">
+						<img
+							src={logo}
+							width={logoWidth}
+							height={logoHeight}
+						/>
+					</div>
+				</div>
 
-          <div className="mt-4">
-            <img
-              src={pricing}
-              width={pricingWidth}
-              height={pricingHeight}
-            />
-          </div>
-        </div>
+				<div className="mt-4">
+					<img
+						src={pricing}
+						width={pricingWidth}
+						height={pricingHeight}
+					/>
+				</div>
+      </div>
       </div>
   ) 
 }
