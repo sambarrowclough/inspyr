@@ -212,7 +212,7 @@ export default function Index({ icons, index }) {
       <Layout>
         <Head>
           <title>
-            inspyr - carefully selected pricing pages for inspiration
+            inspyr - Handpicked set of beautifully designed SVG icons 
           </title>
         </Head>
         <Container>
