@@ -117,11 +117,11 @@ export default function Index({ icons, index }) {
 							placeholder="Search Icons"
 							type="text"
 							value={query}
-							className="border-2 px-10 transition-all focus:ring-4 rounded outline-none px-4 py-2"
+							className="border-2 pl-11 pr-10  transition-all focus:ring-4 rounded outline-none py-2"
 							onChange={(event) => setQuery(event.target.value)}
 						/>
 
-						<div className="absolute text-gray-400 top-3 left-2">
+						<div className="absolute text-gray-400 top-3 left-3">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
 								<circle cx="11" cy="11" r="8"></circle>
 								<line x1="21" y1="21" x2="16.65" y2="16.65"></line><
