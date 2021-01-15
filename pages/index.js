@@ -166,7 +166,7 @@ export default function Index({ icons, index }) {
                         {x && x.svg && (
                           <button
                             onClick={copyIcon}
-                            className="hover:bg-gray-100 rounded ml-1 mb-1 p-2 flex items-center focus:outline-none focus:ring focus:border-blue-300"
+                            className="hover:scale-125 transform transition-all hover:bg-gray-100 rounded ml-1 mb-1 p-2 flex items-center focus:outline-none focus:ring focus:border-blue-300"
                             dangerouslySetInnerHTML={{ __html: x.svg }}
                           />
                         )}
