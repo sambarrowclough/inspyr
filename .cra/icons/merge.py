@@ -3,7 +3,7 @@ import json
 
 from os import listdir
 from os.path import isfile, join
-v='heroicons-0.4.1/src/solid'
+v='modulz/src'
 vi = [f for f in listdir(v) if isfile(join(v, f))]
 
 
@@ -15,6 +15,8 @@ for i in vi:
     o={}
     o['name']=i
     o['svg']=svg
+    o['src']='modulz'
+    # o['solid']=False
     a.append(o)
 
 

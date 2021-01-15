@@ -13,3 +13,7 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+.icons svg {
+		width: 16px;
+		height: 16px;
+}

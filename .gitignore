@@ -1,9 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules
-nextjs/node_modules
-cra/node_modules
+/node_modules
 /.pnp
 .pnp.js
 
@@ -11,12 +9,11 @@ cra/node_modules
 /coverage
 
 # next.js
-nextjs/.next/
-.next/
-nextjs/out/
+/.next/
+/out/
 
 # production
-nextjs/build
+/build
 
 # misc
 .DS_Store

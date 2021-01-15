@@ -1,3 +1,8 @@
+# 404 on production page
+1. build cmd = next build && next export
+2. deploy
+3. `out` output dir
+
 # A statically generated blog example using Next.js and Markdown
 
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
