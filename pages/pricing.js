@@ -4,6 +4,8 @@ import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Card from "../components/card";
+import Show from "../components/show";
+
 import Head from "next/head";
 import Link from "next/link";
 import { CMS_NAME } from "../lib/constants";
@@ -36,39 +38,6 @@ export default function Index({ icons, index }) {
     });
   }
 
-  const customAnimation = keyframes`
-		from {
-			visibility: visible;
-			opacity: 0;
-			transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-			transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
-		}
-
-		to {
-			visibility: visible;
-			opacity: 1;
-			transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-			transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
-		}
-	`;
-
-  // function MyAnimatedComponent({ children, delay }) {
-  //   return <div>{children}</div>;
-  // }
-  function MyAnimatedComponent({ children, delay}) {
-  	return (
-  		<Reveal
-  			delay={delay}
-  			duration='1000'
-  			keyframes={customAnimation}
-  			triggerOnce
-  		>
-  			{children}
-  		</Reveal>
-  	);
-  }
-
-
   return (
     <>
       <Layout>
@@ -89,7 +58,7 @@ export default function Index({ icons, index }) {
               margBottom: "-1em",
             }}
           >
-            <MyAnimatedComponent>
+            <Show duration="1000" delay="30" >
               <Card
                 background="#121212"
                 pricing="/dsp.png"
@@ -102,9 +71,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://deepsource.io/pricing/"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="15">
+            <Show duration="1000" delay="40">
               <Card
                 background="#fff"
                 pricing="/orm.png"
@@ -117,9 +86,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-dark.svg"
                 url="https://www.onroadmap.com/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="20">
+            <Show duration="1000" delay="50">
               <Card
                 background="linear-gradient(225deg, rgb(155, 66, 227), rgb(48, 51, 149))"
                 pricing="/whim.png"
@@ -132,9 +101,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="25">
+            <Show duration="1000" delay="60">
               <Card
                 background="#fff"
                 pricing="/ch.png"
@@ -147,9 +116,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-dark.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="0">
+            <Show duration="1000" delay="0">
               <Card
                 background="#060606"
                 pricing="/lp.png"
@@ -162,9 +131,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="15">
+            <Show duration="1000" delay="15">
               <Card
                 background="#000"
                 pricing="/dekksp.png"
@@ -177,9 +146,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="20">
+            <Show duration="1000" delay="20">
               <Card
                 background="#1e202cf2"
                 pricing="/css.png"
@@ -192,9 +161,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="25">
+            <Show duration="1000" delay="25">
               <Card
                 background="#0d101e"
                 pricing="/rpl.png"
@@ -207,9 +176,9 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
 
-            <MyAnimatedComponent delay="30">
+            <Show duration="1000" delay="30">
               <Card
                 background="#0e0e12"
                 pricing="/op.png"
@@ -222,7 +191,7 @@ export default function Index({ icons, index }) {
                 external="/external-link-light.svg"
                 url="https://www.openphone.co/pricing"
               />
-            </MyAnimatedComponent>
+            </Show>
           </div>
         </Container>
       </Layout>

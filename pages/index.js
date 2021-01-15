@@ -5,16 +5,13 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import Nav from "../components/nav";
+import Show from "../components/show";
 
 import { getIcons } from "../lib/api";
 import Head from "next/head";
 import Link from "next/link";
 import { CMS_NAME } from "../lib/constants";
 import { useState, useRef, Fragment, useEffect, useCallback} from "react";
-// import ScrollReveal from 'scrollreveal'
-import { Fade } from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
-import Reveal from "react-awesome-reveal";
 
 import { styled, css } from "../lib/stitches.config.js";
 import * as Tooltip from "@radix-ui/react-tooltip";
@@ -23,38 +20,6 @@ import toast, { Toaster } from "react-hot-toast";
 import * as JsSearch from "js-search";
 
 export default function Index({ icons, index }) {
-  const customAnimation = keyframes`
-		from {
-			visibility: visible;
-			opacity: 0;
-			transform: matrix3d(0.95, 0, 0, 0, 0, 0.95, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-			transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
-		}
-
-		to {
-			visibility: visible;
-			opacity: 1;
-			transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-			transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
-		}
-	`;
-
-  // function MyAnimatedComponent({ children, delay }) {
-  //   return <div>{children}</div>;
-  // }
-  function MyAnimatedComponent({ children, delay}) {
-  	return (
-  		<Reveal
-  			delay={delay}
-  			duration='200'
-  			keyframes={customAnimation}
-  			triggerOnce
-  		>
-  			{children}
-  		</Reveal>
-  	);
-  }
-
   var search = new JsSearch.Search("name");
   // search.indexStrategy = new JsSearch.AllSubstringsIndexStrategy();
   search.addIndex("name");
@@ -142,7 +107,9 @@ export default function Index({ icons, index }) {
 
     return (
       <Fragment>
-        <MyAnimatedComponent>
+        <Show
+          duration={200}
+        >
 				<div className="flex justify-center pt-20">
 					<div className="flex-inline relative">
 						<input
@@ -169,15 +136,16 @@ export default function Index({ icons, index }) {
 						</div>
 					</div>
         </div>
-        </MyAnimatedComponent>
+        </Show>
 
-        <MyAnimatedComponent
+        <Show
           delay={75}
+          duration={200}
         >
       		<div className="flex justify-center text-gray-300 text-sm mt-4">
       				NOTE: click to copy an icon
       		</div>
-        </MyAnimatedComponent>
+        </Show>
 
         <div className="pt-20 icons flex flex-wrap m">
           {data.length &&
