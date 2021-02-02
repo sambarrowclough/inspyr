@@ -83,9 +83,9 @@ export default function Footer() {
           <div className="flex lg:mt-0 lg:ml-12 mt-10 items-center">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-row justify-center"
+              className="flex flex-col lg:flex-row flex-row justify-center"
             >
-              <div>
+              <div className="mb-10 lg:mb-0">
                 <input
                   placeholder="Email addres"
                   className="bg-gray-100 transition-all focus:ring-4 rounded outline-none px-4 py-2 mr-4"

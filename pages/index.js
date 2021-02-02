@@ -95,7 +95,7 @@ export default function Index({ icons, index }) {
                 }
             })
 
-            navigator.clipboard.writeText(target.value).then(
+            navigator && navigator.clipboard && navigator.clipboard.writeText(target.value).then(
                 function () {
                     console.log('Async: Copying to clipboard was successful!')
                 },
