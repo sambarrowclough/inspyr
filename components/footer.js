@@ -35,9 +35,9 @@ export default function Footer() {
   return (
     <footer className="">
       <Container>
-        <div className="flex justify-between py-24 items-center">
-  				<div className="flex flex-row items-baseline items-left relative">
-            <div className="mr-12 text-sm">
+        <div className="flex flex-col lg:flex-row justify-between py-24 items-center">
+  				<div className="flex lg:flex-row flex-col justify-center items-centers  relative">
+            <div className="text-sm mb-10 lg:mb-0 lg:mr-10">
       				<Link href={'/'}>
       					<a
                   style={{
@@ -60,7 +60,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex">
+            <div className="flex items-center justify-center">
               <div className="text-sm text-gray-400 mr-2">
                 Icons from
               </div>
@@ -80,7 +80,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex lg:mt-0 lg:ml-12 mt-10 items-center">
             <form
               onSubmit={handleSubmit}
               className="flex flex-row justify-center"

@@ -234,26 +234,26 @@ export default function Index({ icons, index }) {
 
     const [results, setResults] = useState('')
 
-const list = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.6,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: "afterChildren",
-    },
-  },
-}
+    const list = {
+        visible: {
+            opacity: 1,
+            transition: {
+                when: 'beforeChildren',
+                staggerChildren: 0.6
+            }
+        },
+        hidden: {
+            opacity: 0,
+            transition: {
+                when: 'afterChildren'
+            }
+        }
+    }
 
-const item = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0,  },
-}
+    const item = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 }
+    }
 
     return (
         <>
