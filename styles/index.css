@@ -17,3 +17,48 @@
 		width: 16px;
 		height: 16px;
 }
+
+.badge {
+	font-size: 14px;
+	font-family: Prompt;
+	color: #666;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 7px;
+	padding-top: 7px;
+	/* border-radius: 10px; */
+	border-top-left-radius: 10px;
+	border: 1px solid #eee;
+	text-decoration: none;
+  }
+
+  .status {
+	border-radius: 50%;
+	border: 1px solid rgb(255, 255, 255);
+	background-color: rgb(76, 183, 130);
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	bottom: -2px;
+	right: 4px;
+  }
+  .avatar {
+	display: flex;
+	border-radius: 50%;
+	width: 26px;
+	height: 26px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(60, 110, 108);
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	flex-shrink: 0;
+	text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	margin-right: 6px;
+  }
